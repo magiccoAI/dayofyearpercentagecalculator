@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+from matplotlib.ticker import PercentFormatter
+
+total_days = 365
+passed_days = 146
+progress = passed_days / total_days
+
+# 绘制进度条
+fig, ax = plt.subplots(figsize=(8, 1))
+ax.barh(['Progress'], [1], color='lightgray')  # 背景条
+ax.barh(['Progress'], [progress], color='#4CAF50')  # 进度条
+ax.set_xlim(0, 1)
+ax.xaxis.set_major_formatter(PercentFormatter(1))  # 百分比格式
+ax.text(progress/2, 0, f'{passed_days}天 ({progress:.1%})', va='center', ha='center', color='white', fontsize=12)
+ax.axis('off')
+plt.title('2025年时间进度（截至5月26日）')
+plt.show()

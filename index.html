@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>年度日期进度</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="interactive-background"></canvas>
+    <div class="container">
+        <h1>年度日期进度查询</h1>
+        <div class="date-info">
+            <p>今天是 <span id="current-date"></span></p>
+            <p>是今年的第 <span id="day-of-year"></span> 天</p>
+            <p>年度已过 <span id="percentage-of-year"></span></p>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar-background">
+                <div id="progress-bar" class="progress-bar-foreground"></div>
+            </div>
+            <div id="progress-text" class="progress-text">0%</div>
+        </div>
+
+        <div class="year-grid-container">
+            <h2>年度日历视图</h2>
+            <div id="year-grid" class="year-grid"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
