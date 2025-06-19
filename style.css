@@ -10,6 +10,38 @@ body {
     overflow: hidden; /* Prevent scrollbars from canvas */
 }
 
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
+
 #interactive-background {
     position: fixed; /* Changed from absolute to fixed for full viewport coverage */
     top: 0;
@@ -18,6 +50,38 @@ body {
     height: 100%;
     z-index: -1; /* Ensure canvas is behind all other content */
 }
+
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
 
 .container {
     background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
@@ -31,26 +95,186 @@ body {
     z-index: 1; /* Ensure container is above the canvas */
 }
 
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
+
 h1 {
     color: #333;
     margin-bottom: 20px;
 }
+
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
 
 .date-info p {
     font-size: 1.1em;
     margin: 10px 0;
 }
 
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
+
 .date-info span {
     font-weight: bold;
     color: #4CAF50;
 }
+
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
 
 .progress-container {
     width: 100%;
     margin-top: 25px;
     position: relative;
 }
+
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
 
 .progress-bar-background {
     background-color: #e0e0e0;
@@ -59,6 +283,38 @@ h1 {
     width: 100%;
     overflow: hidden; /* Ensures the foreground bar stays within the bounds */
 }
+
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
 
 .progress-bar-foreground {
     background-image: linear-gradient(to right, #66BB6A, #43A047, #2E7D32);
@@ -70,6 +326,38 @@ h1 {
     align-items: center;
     justify-content: center; /* Center text inside the progress bar if needed */
 }
+
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
 
 .progress-text {
     position: absolute;
@@ -83,15 +371,111 @@ h1 {
     z-index: 1; /* Ensure text is above the progress bar */
 }
 
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
+
 .year-grid-container {
     margin-top: 30px;
 }
+
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
 
 .year-grid-container h2 {
     font-size: 1.2em;
     color: #555;
     margin-bottom: 15px;
 }
+
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
 
 .year-grid {
     display: grid;
@@ -105,6 +489,38 @@ h1 {
     overflow-y: auto; /* Enable vertical scroll if content exceeds max-height */
 }
 
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
+
 .day-cell {
     width: 100%;
     padding-bottom: 100%; /* Maintain aspect ratio 1:1 for squares */
@@ -113,9 +529,73 @@ h1 {
     position: relative; /* For potential future content inside cells */
 }
 
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
+
 .day-cell.passed {
     background-color: #4CAF50; /* Color for days passed */
 }
+
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
 
 .day-cell.today {
     background-color: #FFC107; /* Color for the current day */
@@ -123,9 +603,73 @@ h1 {
     z-index: 2; /* Ensure today's highlight is visible */
 }
 
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
+
 .day-cell.month-start {
     border-left: 2px solid #0D47A1; /* Blue border for month start */
 }
+
+.star {
+  position: fixed;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+  box-shadow: 0 0 15px #FFD700;
+  border-radius: 50%;
+  pointer-events: none;
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.8;
+  transform: translate(0, 0);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes star-fall {
+  100% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance)
+    ));
+  }
+}
+
+/* Add media queries here */
 
 .day-cell.week-start::before {
     content: '';

@@ -146,34 +146,66 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Generate year grid
         yearGridElem.innerHTML = ''; // Clear previous grid
+        // 修改后的代码片段
         for (let i = 1; i <= totalDaysInYear; i++) {
             const dayCell = document.createElement('div');
             dayCell.classList.add('day-cell');
-
+    
             // Determine the actual date for day i
             const cellDate = new Date(year, 0, i); // Month is 0-indexed, day is 1-indexed
-
+    
             if (i < dayOfYear) {
                 dayCell.classList.add('passed');
             } else if (i === dayOfYear) {
                 dayCell.classList.add('today');
                 dayCell.classList.add('passed'); // Mark today as passed as well for color consistency
             }
-
+    
             // Check for month start
             if (cellDate.getDate() === 1) {
                 dayCell.classList.add('month-start');
             }
-
+    
             // Check for week start (Monday, getDay() returns 1 for Monday)
             if (cellDate.getDay() === 1) {
                 dayCell.classList.add('week-start');
             }
-
-            dayCell.setAttribute('title', `${year}年${cellDate.getMonth() + 1}月${cellDate.getDate()}日, 第 ${i} 天`); // Add a more detailed tooltip
+    
+            dayCell.setAttribute('title', `${year}年${cellDate.getMonth() + 1}月${cellDate.getDate()}日, 第 ${i} 天`);
+            dayCell.dataset.day = i; // Add a more detailed tooltip
             yearGridElem.appendChild(dayCell);
+            
+            dayCell.addEventListener('mouseenter', createStarEffect);
         }
     }
 
+    function createStarEffect(e) {
+        const dayNum = parseInt(e.target.dataset.day);
+        const container = document.body;
+        
+        for(let i = 0; i < dayNum; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            
+            const {x, y} = e.target.getBoundingClientRect();
+            const centerX = x + e.target.offsetWidth/2;
+            const centerY = y + e.target.offsetHeight/2;
+            
+            star.style.cssText = `
+              left: ${centerX}px;
+              top: ${centerY}px;
+              --angle: ${Math.random() * 360}deg;
+              --distance: ${200 + Math.random() * 300}px;
+              --size: ${2 + Math.random() * 4}px;
+              animation: star-fall ${0.5 + Math.random() * 1.5}s ease-out forwards;
+            `;
+            
+            container.appendChild(star);
+            star.addEventListener('animationend', () => star.remove());
+        }
+        
+        
+    }
+
     updateDateInfo();
-});
+    });
